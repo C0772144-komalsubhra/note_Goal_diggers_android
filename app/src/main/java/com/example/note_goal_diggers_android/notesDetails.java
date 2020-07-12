@@ -1,11 +1,15 @@
 package com.example.note_goal_diggers_android;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -65,5 +69,53 @@ public class notesDetails extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.notes_edit_menu,menu);
+        return true;
+
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.mapsmenu){
+            Intent i = new Intent(this, mapsActivity.class);
+            i.putExtra("notelat",selectednotelat);
+            i.putExtra("notelon",selectednotelon);
+            startActivity(i);
+
+        }
+        if(item.getItemId() == R.id.save_editednotes){
+
+            notesdata.child("content").setValue(notesDetails.getText().toString());
+            onBackPressed();
+
+
+        }
+        if(item.getItemId() == R.id.delete_notes){
+
+            notesdata.removeValue();
+            Intent i = new Intent(this, MainActivity.class);
+            i.putExtra("subname",sname);
+            startActivity(i);
+
+
+
+
+        }
+
+
+
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
