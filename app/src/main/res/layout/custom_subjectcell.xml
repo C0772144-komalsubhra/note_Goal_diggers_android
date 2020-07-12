@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="false"
+    android:layout_marginStart="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/radius"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imgEmp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:background="#6D435A"
+        android:padding="10dp"
+        app:srcCompat="@drawable/ic_foldericon" />
+
+    <TextView
+        android:id="@+id/subjectTitle"
+        android:layout_width="207dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/imgEmp"
+        android:text="Title"
+        android:textColor="#FFFCF9"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
