@@ -20,7 +20,11 @@ public class notesDetails extends AppCompatActivity {
     TextView notesDetails;
     DatabaseReference notesdata;
     Toolbar toolbar;
-
+    String selectednotelat;
+    String selectednotelon;
+    String id;
+    String sname;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
