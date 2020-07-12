@@ -24,15 +24,13 @@ public class notesDetails extends AppCompatActivity {
     String selectednotelon;
     String id;
     String sname;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_details);
-        notesDetails = findViewById(R.id.notesDetails);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         Intent i = getIntent();
