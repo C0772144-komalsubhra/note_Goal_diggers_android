@@ -34,8 +34,9 @@ public class notesDetails extends AppCompatActivity {
 
 
         Intent i = getIntent();
-        String id = i.getExtras().getString("id");
-        notesdata = FirebaseDatabase.getInstance().getReference().child("Notes").child(id);
+        id = i.getExtras().getString("id");
+        sname = i.getExtras().getString("sname");
+        notesdata = FirebaseDatabase.getInstance().getReference().child("Notes").child(sname).child("subjectnotes").child(id);
 
         Toast.makeText(this,String.valueOf(id), Toast.LENGTH_LONG).show();
         Log.d("detailshow", String.valueOf(notesdata.child(id)));
@@ -45,6 +46,8 @@ public class notesDetails extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 notesDetails.setText(dataSnapshot.child("content").getValue().toString());
+                selectednotelat = dataSnapshot.child("userlat").getValue().toString();
+                selectednotelon = dataSnapshot.child("userlong").getValue().toString();
                 getSupportActionBar().setTitle(dataSnapshot.child("title").getValue().toString());
 
                 Log.d("showmedata",dataSnapshot.child("title").getValue().toString());
