@@ -7,6 +7,7 @@
     android:background="@color/cardview_light_background"
     android:orientation="vertical"
     tools:context="splashScreenActivity">
+
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/splashimage"
         android:layout_width="411dp"
@@ -16,7 +17,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:background="@color/cardview_light_background"
-        tools:srcCompat="@drawable/notepadgif"/>
+        android:src="@drawable/notepadgif"
+        tools:srcCompat="@drawable/notepadgif" />
 
 
 
