@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -23,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.Calendar;
 
 public class addNote extends AppCompatActivity {
+
     //database variables intialization
     DatabaseReference notesdata;
     notes Notes;
@@ -34,6 +36,12 @@ public class addNote extends AppCompatActivity {
     Calendar c;
     String todaysDate;
     String currentTime;
+    String id;
+    double noteslat;
+    double noteslong;
+
+    //initialization for location.
+    FusedLocationProviderClient client;
 
 
     @Override
