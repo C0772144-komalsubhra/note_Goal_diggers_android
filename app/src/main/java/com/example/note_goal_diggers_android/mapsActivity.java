@@ -11,12 +11,26 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DatabaseReference;
+
+import java.util.HashMap;
 
 public class mapsActivity extends AppCompatActivity {
     SupportMapFragment supportMapFragment;
 
+
     String lat;
     String lon;
+    LatLng secondlatlon;
+    DatabaseReference notesdata;
+    HashMap<String,Double> getlatlong;
+    Double newlat;
+    Double newlong;
+    GoogleMap mymap;
+
+
+
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
