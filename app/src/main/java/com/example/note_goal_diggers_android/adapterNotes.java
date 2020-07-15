@@ -18,6 +18,8 @@ public class adapterNotes extends RecyclerView.Adapter< adapterNotes.ViewHolder>
 
     LayoutInflater inflater;
     List<notes> noteslist =new ArrayList<>();
+    List<notes> noteslistfull =new ArrayList<>();
+    Context dcontext;
 
 
 
