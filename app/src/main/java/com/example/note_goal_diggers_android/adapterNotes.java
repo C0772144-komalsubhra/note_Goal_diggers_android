@@ -26,6 +26,8 @@ public class adapterNotes extends RecyclerView.Adapter< adapterNotes.ViewHolder>
     adapterNotes(Context context, List<notes> noteslist){
         this.inflater = LayoutInflater.from(context);
         this.noteslist = noteslist;
+        noteslistfull = new ArrayList<notes>(noteslist);
+        this.dcontext = dcontext;
 
     }
 
