@@ -96,7 +96,7 @@ public class notesDetails extends AppCompatActivity {
         sname = i.getExtras().getString("sname");
         notesdata = FirebaseDatabase.getInstance().getReference().child("Notes").child(sname).child("subjectnotes").child(id);
 
-        Toast.makeText(this,String.valueOf(id), Toast.LENGTH_LONG).show();
+       // Toast.makeText(this,String.valueOf(id), Toast.LENGTH_LONG).show();
         Log.d("detailshow", String.valueOf(notesdata.child(id)));
 
         notesdata.addValueEventListener(new ValueEventListener() {
@@ -139,7 +139,8 @@ public class notesDetails extends AppCompatActivity {
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(notesDetails.this, "no image found", Toast.LENGTH_LONG).show();
+                                Toast.makeText(notesDetails
+                                        .this, "no image found", Toast.LENGTH_LONG).show();
 
                             }
                         });
