@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "946764526960",
+    "firebase_url": "https://notegoaldiggersandroid.firebaseio.com",
+    "project_id": "notegoaldiggersandroid",
+    "storage_bucket": "notegoaldiggersandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946764526960:android:674fa5ab965cc2c2750bb5",
+        "android_client_info": {
+          "package_name": "com.example.note_goal_diggers_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "946764526960-armvnup2hdnjtrantogkonp61e6vubu5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.note_goal_diggers_android",
+            "certificate_hash": "d21e9bc64d534cc677acc727e3adb26e30f29f6e"
+          }
+        },
+        {
+          "client_id": "946764526960-7jg7ps7o1f2qh9q2k12fdehjhdupvpit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBihmWctnwoQbW18q4vO5yDiZ2AjWDT79o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "946764526960-7jg7ps7o1f2qh9q2k12fdehjhdupvpit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

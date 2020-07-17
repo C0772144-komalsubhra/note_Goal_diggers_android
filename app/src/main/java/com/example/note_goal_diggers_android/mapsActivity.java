@@ -102,7 +102,7 @@ public class mapsActivity extends AppCompatActivity {
 
                 MarkerOptions options = new MarkerOptions().position(latLng).title("Created here!");
 
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
 
                 googleMap.addMarker(options);
 
