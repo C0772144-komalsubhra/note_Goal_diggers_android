@@ -41,7 +41,6 @@ import com.google.firebase.storage.StorageReference;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
-
 public class notesDetails extends AppCompatActivity {
 
     TextView notesDetails;

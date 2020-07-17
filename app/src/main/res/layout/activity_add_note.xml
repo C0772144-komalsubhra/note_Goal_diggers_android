@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addNoteActivity"
+    tools:context=".addNote"
     android:background="#FFFCF9">
 
     <androidx.appcompat.widget.Toolbar
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:layout_marginBottom="1dp"
-        android:background="#6D435A"
+        android:background="#44A1A0"
         app:layout_constraintBottom_toTopOf="@+id/listOfNotes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -84,7 +84,7 @@
         android:layout_marginStart="29dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="52dp"
-        android:text="TextView"
+        android:text="      "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/uploadingImage"
         app:layout_constraintTop_toBottomOf="@+id/noteDetails" />
