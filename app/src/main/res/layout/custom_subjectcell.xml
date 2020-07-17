@@ -19,7 +19,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="13dp"
-        android:background="#6D435A"
+        android:background="#44A1A0"
         android:padding="10dp"
         app:srcCompat="@drawable/ic_foldericon" />
 

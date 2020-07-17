@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:background="#E9EBF8"
     android:orientation="vertical"
-    tools:context=".notesDetailsActivity">
+    tools:context=".notesDetails">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:layout_marginBottom="1dp"
-        android:background="#6D435A"
+        android:background="#44A1A0"
         app:titleTextColor="#FFFCF9"/>
 
     <EditText

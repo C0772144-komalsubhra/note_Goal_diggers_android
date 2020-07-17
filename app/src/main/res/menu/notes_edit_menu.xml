@@ -4,12 +4,12 @@
 
     <item
         android:id="@+id/save_editednotes"
-        android:icon="@drawable/ic_saveicon"
+        android:icon="@drawable/ic_filesaveicon"
         android:title="save"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/mapsmenu"
-        android:icon="@drawable/ic_mapicon"
+        android:icon="@drawable/ic_pin_dropicon"
         android:title="Item"
         app:showAsAction="ifRoom" />
     <item
