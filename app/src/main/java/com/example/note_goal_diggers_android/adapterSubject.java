@@ -42,7 +42,7 @@ public class adapterSubject extends RecyclerView.Adapter< adapterSubject.ViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull adapterSubject.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull adapterSubject.ViewHolder holder, final int position) {
         String title = subjectlist.get(position).getSubjectID();
         holder.subtitle.setText(title);
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
