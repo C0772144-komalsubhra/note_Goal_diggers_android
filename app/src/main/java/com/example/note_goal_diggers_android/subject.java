@@ -43,5 +43,3 @@ public class subject {
         this.subjectnotes = subjectnotes;
     }
 }
-
-

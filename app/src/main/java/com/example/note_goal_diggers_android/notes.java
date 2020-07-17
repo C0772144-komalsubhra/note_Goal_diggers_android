@@ -1,5 +1,7 @@
 package com.example.note_goal_diggers_android;
 
+import java.util.ArrayList;
+
 public class notes{
     private String id;
     private String title;
@@ -9,6 +11,17 @@ public class notes{
     private String subjectname;
     private double userlat;
     private double userlong;
+    private ArrayList<notes> colist = new ArrayList<notes>();
+
+    public String getImagename() {
+        return imagename;
+    }
+
+    public void setImagename(String imagename) {
+        this.imagename = imagename;
+    }
+
+    private String imagename;
 
 
 
@@ -31,6 +44,10 @@ public class notes{
         this.content = content;
         this.date = date;
         this.time = time;
+    }
+
+    public notes(String imagename) {
+        this.imagename = imagename;
     }
 
     public String getId() {
@@ -95,5 +112,13 @@ public class notes{
 
     public void setUserlong(double userlong) {
         this.userlong = userlong;
+    }
+
+    public ArrayList<notes> getColist() {
+        return colist;
+    }
+
+    public void setColist(ArrayList<notes> colist) {
+        this.colist = colist;
     }
 }

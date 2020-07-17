@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,29 +41,42 @@ public class subjectActivity extends AppCompatActivity {
     Toolbar toolbar;
     RecyclerView subrecyclerView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject);
 
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         subrecyclerView=findViewById(R.id.subjectRecyclerView);
-        subrecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        subrecyclerView.setLayoutManager(new GridLayoutManager(this,2));
         subdata = FirebaseDatabase.getInstance().getReference().child("Notes");
+
+//        notes scn = new notes("1","rocketscience","new theory","7/7/20","6:30","science");
+//
+//         Subject  = new subject("science");
+//            Subject.addnotes(scn);
+//
+//
+//         subdata.child("science").setValue(Subject);
+
+
 
         subdata.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 sublist.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+
                     Log.d("subjectlog", String.valueOf(dataSnapshot1.getValue(subject.class)));
                     subject subj = dataSnapshot1.getValue(subject.class);
                     sublist.add(subj);
 
                 }
 
-                allDataAdapter = new adapterSubject(subjectActivity.this, sublist);
+                allDataAdapter = new adapterSubject(subjectActivity.this, sublist,subjectActivity.this);
                 subrecyclerView.setAdapter(allDataAdapter);
                 allDataAdapter.notifyDataSetChanged();
 

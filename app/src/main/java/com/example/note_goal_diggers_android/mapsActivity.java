@@ -25,8 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 
 public class mapsActivity extends AppCompatActivity {
-    SupportMapFragment supportMapFragment;
 
+    SupportMapFragment supportMapFragment;
 
     String lat;
     String lon;
@@ -52,11 +52,11 @@ public class mapsActivity extends AppCompatActivity {
         lon = i.getExtras().getString("notelon");
         final String  id = i.getExtras().getString("id");
         final String sname = i.getExtras().getString("sname");
-
 //        HashMap<String,Double> hm = (HashMap<String, Double>) i.getExtras().get("hashmap");
 //        Log.d("myhash", String.valueOf(hm));
 
         notesdata = FirebaseDatabase.getInstance().getReference().child("Notes").child(sname).child("subjectnotes").child(id);
+
         notesdata.addValueEventListener(new ValueEventListener() {
 
 

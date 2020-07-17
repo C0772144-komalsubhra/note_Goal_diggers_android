@@ -22,17 +22,19 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class adapterSubject extends RecyclerView.Adapter< adapterSubject.ViewHolder> implements Filterable {
+public class adapterSubject  extends RecyclerView.Adapter< adapterSubject.ViewHolder> implements Filterable  {
 
     LayoutInflater inflater;
     List<subject> subjectlist =new ArrayList<>();
     List<subject> subjectlistFull =new ArrayList<>();
+
     Context dcontext;
-    public adapterSubject(Context context, List<subject> subjectlist){
+    public adapterSubject(Context context, List<subject> subjectlist,Context dcontext){
         this.inflater = LayoutInflater.from(context);
         this.subjectlist = subjectlist;
         subjectlistFull = new ArrayList<subject>(subjectlist);
         this.dcontext = dcontext;
+
     }
     @NonNull
     @Override
@@ -42,9 +44,11 @@ public class adapterSubject extends RecyclerView.Adapter< adapterSubject.ViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull adapterSubject.ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final adapterSubject.ViewHolder holder, final int position) {
         String title = subjectlist.get(position).getSubjectID();
         holder.subtitle.setText(title);
+
+
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -93,8 +97,6 @@ public class adapterSubject extends RecyclerView.Adapter< adapterSubject.ViewHol
 
     }
 
-
-
     @Override
     public int getItemCount() {
         return  subjectlist.size();
@@ -126,7 +128,6 @@ public class adapterSubject extends RecyclerView.Adapter< adapterSubject.ViewHol
             return results;
 
         }
-
 
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {

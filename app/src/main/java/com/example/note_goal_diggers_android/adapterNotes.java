@@ -31,11 +31,12 @@ public class adapterNotes extends RecyclerView.Adapter< adapterNotes.ViewHolder>
 
 
 
-    adapterNotes(Context context, List<notes> noteslist){
+    public adapterNotes(Context context, List<notes> noteslist,    Context dcontext){
         this.inflater = LayoutInflater.from(context);
         this.noteslist = noteslist;
         noteslistfull = new ArrayList<notes>(noteslist);
         this.dcontext = dcontext;
+
 
     }
 
@@ -54,7 +55,6 @@ public class adapterNotes extends RecyclerView.Adapter< adapterNotes.ViewHolder>
         holder.date.setText(date);
         holder.time.setText(time);
         holder.title.setText(title);
-
 
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -104,11 +104,6 @@ public class adapterNotes extends RecyclerView.Adapter< adapterNotes.ViewHolder>
 
 
     }
-
-
-
-
-
 
     @Override
     public int getItemCount() {
